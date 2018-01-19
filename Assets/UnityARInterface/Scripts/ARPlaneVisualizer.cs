@@ -16,9 +16,11 @@ namespace UnityARInterface
 
         private Dictionary<string, GameObject> m_Planes = new Dictionary<string, GameObject>();
 
+		public static string ARKIT_PLANE_LAYER = "ARKitPlane";
+
         void OnEnable()
         {
-            m_PlaneLayer = LayerMask.NameToLayer ("ARGameObject");
+			m_PlaneLayer = LayerMask.NameToLayer (ARKIT_PLANE_LAYER);
             ARInterface.planeAdded += PlaneAddedHandler;
             ARInterface.planeUpdated += PlaneUpdatedHandler;
             ARInterface.planeRemoved += PlaneRemovedHandler;

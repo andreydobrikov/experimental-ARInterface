@@ -48,7 +48,7 @@ namespace UnityARInterface
 
 					Ray ray = camera.ScreenPointToRay (Input.mousePosition);
 
-					int layerMask = 1 << LayerMask.NameToLayer ("ARGameObject"); // Planes are in layer ARGameObject
+					int layerMask = 1 << LayerMask.NameToLayer ("ARKitPlane"); // Planes are in layer ARGameObject
 
 					RaycastHit rayHit;
 					if (Physics.Raycast (ray, out rayHit, float.MaxValue, layerMask)) {
